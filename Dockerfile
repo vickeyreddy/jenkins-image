@@ -16,4 +16,6 @@ ADD . /jenkins
 #Give permission to execute install_jenkins.sh file
 RUN chmod +x ./install_jenkins.sh
 
+EXPOSE 8080
+
 ENTRYPOINT ["install_jenkins.sh"]
