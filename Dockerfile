@@ -18,6 +18,6 @@ RUN chmod +x ./install_jenkins.sh
 
 EXPOSE 8080
 
-ENTRYPOINT ["install_jenkins.sh"]
+ENTRYPOINT ["./install_jenkins.sh"]
 
 CMD ["/bin/sh"]
