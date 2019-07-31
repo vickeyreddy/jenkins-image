@@ -8,6 +8,11 @@ node{
    stage('Docker Build') {
      def app = docker.build "vickeyreddy/jnks-docker"
     }
+    stage('Build') {
+      docker.image('maven:3.3.3').inside {
+        sh 'mvn --version'
+      }
+    }
    
    stage("Tag & Push image"){
       withDockerRegistry([credentialsId: 'dockerID',url: ""]) {
