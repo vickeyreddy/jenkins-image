@@ -2,7 +2,7 @@
 FROM ubuntu:18.10
 
 #Maintainer of this docker build
-MAINTAINER Manivannan
+MAINTAINER vickeyreddy
 
 #User to build this image
 #USER docker
