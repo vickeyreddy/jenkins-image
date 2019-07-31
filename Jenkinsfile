@@ -6,14 +6,14 @@ node{
       }
    
    stage('Docker Build') {
-     def app = docker.build "manee2k6/itrain-jnks-docker"
+     def app = docker.build "vickeyreddy/jnks-docker"
     }
    
    stage("Tag & Push image"){
       withDockerRegistry([credentialsId: 'dockerID',url: ""]) {
-          sh 'docker tag manee2k6/itrain-jnks-docker manee2k6/itrain-jnks-docker:1.0'
-          sh 'docker push manee2k6/itrain-jnks-docker:1.0'
-          sh 'docker push manee2k6/itrain-jnks-docker:latest'
+          sh 'docker tag vickeyreddy/jnks-docker vickeyreddy/jnks-docker:1.0'
+          sh 'docker push vickeyreddy/jnks-docker:1.0'
+          sh 'docker push vickeyreddy/jnks-docker:latest'
       }
     }
    
