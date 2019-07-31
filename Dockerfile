@@ -5,7 +5,7 @@ FROM ubuntu:18.10
 MAINTAINER Manivannan
 
 #User to build this image
-USER 999
+USER docker
 
 #Set the WORKDIR
 WORKDIR /jenkins
